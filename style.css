@@ -1,0 +1,244 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #383636; /* Dark background for the entire body */
+    color: #dcdcdc; /* Light text color for readability */
+}
+
+/* Container for Sections */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+}
+
+/* Header */
+header {
+    background: #1c1c1c; /* Dark background for header */
+    color: #ffffff;
+    padding: 0.5rem 0;
+    text-align: left; /* Left align the header */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #dcdcdc; /* Softer color */
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start; /* Align nav items to the left */
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1abc9c; /* Softer hover color */
+}
+
+/* Section Titles */
+.section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff; /* Light title color */
+}
+
+/* About Section */
+#about {
+    background-color: #1c1c1c; /* Dark background for about section */
+    padding: 0rem 0;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-item {
+    background-color: #3c3c3c; /* Darker background for project items */
+    border: 1px solid #666; /* Lighter border */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+    text-align: center;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.project-item h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #1abc9c; /* Softer heading color */
+}
+
+.project-item p {
+    color: #dcdcdc; /* Light color for description */
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+}
+
+.project-item a {
+    color: #1abc9c; /* Softer link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-item a:hover {
+    color: #16a085; /* Darker shade for hover */
+}
+
+/* Work Experience Grid */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Work Experience Grid */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust to have more space */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.experience-item {
+    padding: 1.5rem; /* Increased padding */
+    background-color: #3c3c3c; /* Darker background for experience items */
+    border: 1px solid #666; /* Lighter border */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center content */
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.experience-item img {
+    width: 330px; /* Set width for logo/image */
+    height: 300px; /* Set height for logo/image */
+    object-fit: cover; /* Ensure image covers the area */
+    margin-bottom: 1rem; /* Space below image */
+}
+
+.experience-item h3 {
+    font-size: 1.5rem; /* Increase font size for title */
+    color: #1abc9c; /* Softer heading color */
+    margin-bottom: 0.5rem;
+}
+
+.experience-item p {
+    font-size: 1rem;
+    color: #dcdcdc; /* Light color for experience description */
+    margin-bottom: 0.5rem;
+}
+
+.experience-item .role {
+    font-style: italic;
+    color: #ffffff; /* White color for roles */
+}
+
+
+/* Skills Section */
+#skills {
+    padding: 1rem 0; /* Add padding to skills section */
+}
+
+#skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 0;
+    text-align: center;
+}
+
+#skills ul li {
+    background: #3c3c3c; /* Softer background for skills */
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+#skills ul li:hover {
+    transform: translateY(-5px); /* Add hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Add shadow on hover */
+}
+
+/* Coursework Section */
+.coursework {
+    text-align: center; /* Centering the coursework section */
+    color: #dcdcdc; /* Light color for text */
+}
+
+.coursework h3 {
+    text-align: center;
+    margin-top: 1rem;
+    color: #1abc9c; /* Softer title color */
+}
+
+/* Footer */
+footer {
+    background: #1c1c1c; /* Darker shade for footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
