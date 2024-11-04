@@ -17,14 +17,14 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
 }
 
 /* Header */
 header {
     background: #1c1c1c; /* Dark background for header */
     color: #ffffff;
-    padding: 0.5rem 0;
+    padding: 2rem 0;
     text-align: left; /* Left align the header */
 }
 
@@ -71,7 +71,7 @@ nav ul li a:hover {
 /* About Section */
 #about {
     background-color: #1c1c1c; /* Dark background for about section */
-    padding: 0rem 0;
+    padding: 0.5rem 3;
 }
 
 #about p {
@@ -206,6 +206,7 @@ nav ul li a:hover {
 
 #skills ul li {
     background: #3c3c3c; /* Softer background for skills */
+    border: 1px solid #666; /* Lighter border */
     padding: 0.5rem;
     border-radius: 4px;
     color: #ffffff;
@@ -221,13 +222,13 @@ nav ul li a:hover {
 /* Coursework Section */
 .coursework {
     text-align: center; /* Centering the coursework section */
-    color: #dcdcdc; /* Light color for text */
+    color: #ffffff; /* Light color for text */
 }
 
 .coursework h3 {
     text-align: center;
     margin-top: 1rem;
-    color: #1abc9c; /* Softer title color */
+    color: #ffffff; /* Softer title color */
 }
 
 /* Footer */
