@@ -166,10 +166,12 @@ nav ul li a:hover {
 }
 
 .experience-item img {
-    width: 330px; /* Set width for logo/image */
+    width: 100%; /* Set width for logo/image */
     height: 300px; /* Set height for logo/image */
     object-fit: cover; /* Ensure image covers the area */
     margin-bottom: 1rem; /* Space below image */
+
+    
 }
 
 .experience-item h3 {
