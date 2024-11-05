@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #383636; /* Dark background */
+    color: #dcdcdc; /* Light text for readability */
+}
+
+/* Container for content sections */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+/* Header */
+header {
+    background-color: #1c1c1c; /* Dark background for header */
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Game Details Section */
+#game-details {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 2rem;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#game-details h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+#game-details p {
+    font-size: 1rem;
+    color: #dcdcdc;
+    margin-bottom: 25px;
+}
+
+#game-details img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Mechanics Section */
+.mechanics {
+    text-align: left;
+    padding: 0 15px;
+}
+
+.mechanics h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.mechanic {
+    margin-bottom: 25px;
+    background-color: #3c3c3c;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mechanic h3 {
+    font-size: 1.5rem;
+    color: #1abc9c;
+    margin-bottom: 0.5rem;
+}
+
+.mechanic p {
+    font-size: 1rem;
+    color: #dcdcdc;
+    margin-bottom: 1rem;
+}
+
+/* Video */
+video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
