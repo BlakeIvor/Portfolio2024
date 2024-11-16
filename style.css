@@ -245,3 +245,41 @@ footer {
 footer p {
     font-size: 1rem;
 }
+
+
+
+
+
+/* Header - Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align for smaller screens */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0; /* Adjust spacing for stacked items */
+    }
+
+    header {
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Reduce font size for better fit */
+    }
+
+    header p {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem; /* Further reduce font size for very small screens */
+    }
+
+    nav ul li {
+        margin: 0.3rem 0; /* Tighten spacing further */
+    }
+}

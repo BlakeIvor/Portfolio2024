@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Title 1 - Details</title>
-    <link rel="stylesheet" href="projectStyle.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="projectStyle.css">
+    <script>
+        function toggleCode(button) {
+            const codeSnippet = button.nextElementSibling;
+            const isVisible = codeSnippet.style.display === "block";
+            codeSnippet.style.display = isVisible ? "none" : "block";
+            button.textContent = isVisible ? "Show Code" : "Hide Code";
+        }
+    </script>
 </head>
 <body>
-
     <header>
         <div class="container">
             <h1>Blake Shea</h1>
@@ -18,58 +25,71 @@
                     <li><a href="index.html#projects">Projects</a></li>
                     <li><a href="index.html#work_experience">Work Experience</a></li>
                     <li><a href="index.html#skills">Skills</a></li>
-                    <li><a href="index.#coursework">Coursework</a></li>
+                    <li><a href="index.html#coursework">Coursework</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Game Title 1 Details -->
-    <section id="game-details">
-        <h1>Bellicose: Ext. Bellicose Ultimate Fighting</h1>
+    <!-- Combined Game Details and Mechanics -->
+    <div class="game-container container">
+        <!-- Game Details Section -->
+        <section id="game-details">
+            <h1>Bellicose: Ext. Bellicose Ultimate Fighting</h1>
+            <img src="./ImageRefs/Bellicose.png" alt="Bellicose Thumbnail" />
+            <p>Contributions: <i>State Machine Design and General Programming, Controller Support w/New Unity Input System (Unity, C#, Git, Github)</i></p>
+            <p>Bellicose: Ultimate fighting is a 2D Local Multiplayer Fighting Game created originally in 48 hours for IGDA Clark's February Frenzy 2024 Game Jam.</p>
+            <p>Bellicose was created by Blake Shea, Anthony Panasenko, Jason Chen, Sean McDowell, and Liam Quinn</p>
+        </section>
 
-        <img src="./ImageRefs/Bellicose.png" alt="Bellicose Thumbnail" />
-        <p>Contributions: <i>State Machine Design and General Programming, Controller Support w/New Unity Input System (Unity, C#, Git, Github)</i></p>
-        <p>Bellicose: Ultimate fighting is a 2D Local Multiplayer Fighting Game created originally in 48 hours for IGDA Clark's February Frenzy 2024 Game Jam.</p>
-        <p>Bellicose was created by Blake Shea (Programming), Anthony Panasenko (2D Art), Jason Chen (Programming and UI), Sean McDowell (Sprites, Writing, Production), and Liam Quinn (Sound, UI)</p>
-
-        <h3>Gameplay:</h3>
-        <p>Each player can choose from a cast of characters (or random) and a map from the pool. Players have 90 seconds to attempt to knock each other out using a variety of mechanics including 
-            high and low attacks, special attacks, blocking, and crouching. Players can choose either to split a keyboard or to attach a controller as their weapon of choice.</p>
-
-        
-        <p></p>
-
-        <!-- Game Mechanics -->
-        <div class="mechanics">
+        <!-- Game Mechanics Section -->
+        <section class="mechanics">
             <h2>Game Mechanics</h2>
 
             <!-- Mechanic 1 -->
-            <div class="mechanic">
-                <h3>Mechanic Title 1</h3>
-                <p>Description of this mechanic and how it contributes to the gameplay.</p>
+            <div class="mechanic-content">
                 <video controls>
                     <source src="videos/mechanic1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="description">
+                    <h3>Mechanic Title 1</h3>
+                    <p>Description of this mechanic and how it contributes to the gameplay.</p>
+                    <button class="toggle-button" onclick="toggleCode(this)">Show Code</button>
+                    <pre class="code-snippet">
+public class ExampleMechanic {
+    public void Execute() {
+        Console.WriteLine("Executing Mechanic 1");
+    }
+}
+                    </pre>
+                </div>
             </div>
 
             <!-- Mechanic 2 -->
-            <div class="mechanic">
-                <h3>Mechanic Title 2</h3>
-                <p>Description of this mechanic and its role in the game.</p>
+            <div class="mechanic-content">
                 <video controls>
                     <source src="videos/mechanic2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="description">
+                    <h3>Mechanic Title 2</h3>
+                    <p>Description of this mechanic and its role in the game.</p>
+                    <button class="toggle-button" onclick="toggleCode(this)">Show Code</button>
+                    <pre class="code-snippet">
+public class AnotherMechanic {
+    public void Perform() {
+        Console.WriteLine("Performing Mechanic 2");
+    }
+}
+                    </pre>
+                </div>
             </div>
-            <!-- Add more mechanics as needed -->
-        </div>
-    </section>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; Blake Shea 2024</p>
     </footer>
-
 </body>
 </html>

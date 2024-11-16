@@ -8,8 +8,11 @@
 
 /* Body */
 body {
-    background-color: #383636; /* Dark background */
-    color: #dcdcdc; /* Light text for readability */
+    background-color: #383636; /* Unified dark background */
+    color: #dcdcdc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Container for content sections */
@@ -22,7 +25,7 @@ body {
 
 /* Header */
 header {
-    background-color: #1c1c1c; /* Dark background for header */
+    background-color: #1c1c1c;
     color: #ffffff;
     padding: 2rem 0;
     text-align: left;
@@ -60,77 +63,100 @@ nav ul li a:hover {
     color: #1abc9c;
 }
 
-/* Game Details Section */
-#game-details {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 2rem;
+/* Game Details and Mechanics Container */
+.game-container {
     background-color: #1c1c1c;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Game Details */
+#game-details {
     text-align: center;
-}
-
-#game-details h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
-}
-
-#game-details p {
-    font-size: 1rem;
-    color: #dcdcdc;
-    margin-bottom: 25px;
+    margin-bottom: 2rem;
 }
 
 #game-details img {
     width: 50%;
-    height: 50%;
     border-radius: 8px;
     cursor: pointer;
-    padding-bottom: 40px;
-    padding-top: 10px;
+    margin-bottom: 40px;
+}
+
+#game-details h1, #game-details p {
+    color: #dcdcdc;
 }
 
 /* Mechanics Section */
 .mechanics {
-    text-align: left;
-    padding: 0 15px;
+    margin-top: 2rem;
 }
 
 .mechanics h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
     color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.mechanic {
-    margin-bottom: 25px;
-    background-color: #3c3c3c;
-    padding: 1rem;
+.mechanic-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.mechanic-content video {
+    flex: 0 0 35%;
+    max-width: 300px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.mechanic h3 {
-    font-size: 1.5rem;
+.description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description h3 {
     color: #1abc9c;
     margin-bottom: 0.5rem;
 }
 
-.mechanic p {
+.description p {
     font-size: 1rem;
     color: #dcdcdc;
     margin-bottom: 1rem;
 }
 
-/* Video */
-video {
-    width: 100%;
+.code-snippet {
+    display: none;
+    background-color: #1c1c1c;
+    padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    margin-top: 10px;
+    color: #dcdcdc;
+    margin-top: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+
+.toggle-button {
+    background-color: #1abc9c;
+    color: #ffffff;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.toggle-button:hover {
+    background-color: #16a085;
 }
 
 /* Footer */
@@ -139,9 +165,17 @@ footer {
     color: #ffffff;
     padding: 1.5rem 0;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: auto;
 }
 
-footer p {
-    font-size: 1rem;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .mechanic-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mechanic-content video {
+        width: 100%;
+    }
 }
