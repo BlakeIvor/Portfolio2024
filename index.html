@@ -26,10 +26,9 @@
 
     <section id="about" class="section">
         <div class="container">
-            <p>Welcome!</p>
             <p>
-                I'm Blake, a backend engineer and game programmer enthusiastic about using emerging technologies to push what it means to be immersed in games, including LLMS, virtual reality, and augmented reality!
-                Currently studying Computer Science and Interactive Media at Clark University. Experenced with Python, C#, and Java over a variety of use cases including APIs, websites, Unity games, chatbots, and more.
+                I'm Blake, a junior backend engineer and game programmer working with RAG/LLMS, Unity, and server-side programming.
+                Currently studying Computer Science and Interactive Media at Clark University. Experienced with Python and C# over a variety of use cases including APIs, websites, VR, Unity games, chatbots, and more.
             </p>
         </div>
     </section>
@@ -37,28 +36,42 @@
     <section id="projects" class="section">
         <div class="container">
             <h2>Featured</h2>
-            <div class="projects-grid">
-                <div class="project-item">
-                    <img src="./ImageRefs/Terrence.png" alt="Terrence Logo" />
-                    <h3>AI Character Application Server (Education Startup)</h3>
-                    <p>Backend Server Programming, FastAPI WebApps, ChatAI Design, and UE5 Integration</p>
-                    <p>FastAPI based application server development, MongoDB and Llamaindex embed RAG system
-(Python, FastAPI, GPT4o, Docker, MongoDB, LlamaIndex, ElevenLabs, UE5, PlasticSCM)</p>
+            <div class="carousel-container">
+                <!-- Carousel Controls -->
+                <button class="carousel-button prev" onclick="moveCarousel('prev')">Prev</button>
+                
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <video class="project-video" controls>
+                            <source src="./TerrenceInteraction.MP4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>AI Character Narrative Server System Prototype for Ed-Tech Startup: Avilaar, Inc.</h3>
+                        <p>Created a multi-step cloud-based RAG pipeline using Python, FastAPI, OpenAI, MongoDB, LlamaIndex, and AWS to send customized narrative and animation information to animated characters within an Unreal Engine Augmented Reality client app</p>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="project-video" controls>
+                            <source src="path-to-video/Bellicose.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Bellicose</h3>
+                        <p>2D Local Multiplayer Fighting Game created for IGDA Clark's February Frenzy 2024 Game Jam</p>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="project-video" controls>
+                            <source src="path-to-video/TurtleTakeover.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Turtle Takeover</h3>
+                        <p>2D Sidescroller adventure originally created for Game Design Fundamentals.</p>
+                    </div>
                 </div>
-                <div class="project-item">
-                    <img src="./ImageRefs/Bellicose.png" alt="Bellicose Thumbnail" />
-                    <h3>Bellicose</h3>
-                    <p>2D Local Multiplayer Fighting Game created for IGDA Clark's February Frenzy 2024 Game Jam</p>
-                    <p><i>State Machine Design and General Programming, Controller Support w/New Unity Input System (Unity, C#, Git, Github)</i></p>
-                </div>
-                <div class = "project-item">
-                    <img src="./ImageRefs/TurtleTakeover1.png" alt="Turtle Takeover Thumbnail" />
-                    <h3>Turtle Takeover</h3>
-                    <p>2D Sidescroller adventure originally created for <i>Game Design Fundamentals</i>.</p>
-                    <p><i>EnemyAI Controllers, Obstacles, In-Game and Menu UI, and Overall Design (Unity, C#)</i></p>
-                </div>
-                </div>
+                
+                <button class="carousel-button next" onclick="moveCarousel('next')">Next</button>
+            </div>
+        </div>
     </section>
+    
 
     <section>
         <div class="container">
@@ -111,15 +124,6 @@
     </section>
 
 
-
-
-
-
-
-
-
-
-
     <section id="work_experience" class="section">
         <div class="container">
             <h2>Work Experience</h2>
@@ -155,14 +159,17 @@
             <ul>
                 <li>C#</li>
                 <li>Python</li>
-                <li>Java</li>
                 <li>Unity Engine</li>
-                <li>FastAPI, Django</li>
-                <li>SQL DBMS</li>
-                <li>NoSQL DBMS</li>
+                <li>FastAPI</li>
+                <li>Django</li>
+                <li>Tkinter</li>
+                <li>OpenCV</li>
+                <li>SQL</li>
+                <li>NoSQL</li>
                 <li>VR Development</li>
-                <li>PlasticSCM and Git</li>
-                <li>HTML/CSS/JS</li>
+                <li>PlasticSCM</li>
+                <li>Git</li>
+                <li>HTML/CSS</li>
             </ul>
         </div>
     </section>
@@ -181,5 +188,37 @@
             <p>&copy; 2024 Blake Shea. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        let currentIndex = 0;
+    
+        function moveCarousel(direction) {
+            const items = document.querySelectorAll('.carousel-item');
+            const totalItems = items.length;
+    
+            // Hide current item
+            items[currentIndex].style.display = 'none';
+    
+            // Update the index based on the direction
+            if (direction === 'next') {
+                currentIndex = (currentIndex + 1) % totalItems;
+            } else if (direction === 'prev') {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            }
+    
+            // Show the new item
+            items[currentIndex].style.display = 'block';
+        }
+    
+        // Initialize by showing the first item
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.carousel-item');
+            items.forEach((item, index) => {
+                if (index !== currentIndex) {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
 </body>
 </html>

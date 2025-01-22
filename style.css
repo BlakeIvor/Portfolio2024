@@ -347,3 +347,68 @@ footer p {
         font-size: 0.8rem;
     }
 }
+
+/* Featured Carousel Section */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    justify-content: center;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+.project-video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.carousel-button {
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.carousel-button:hover {
+    background-color: #16a085;
+}
+
+/* Optional: Center the carousel on small screens */
+@media (max-width: 768px) {
+    .carousel-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-item p {
+        font-size: 0.9rem;
+    }
+}
